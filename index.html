@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo"><h1><span class="material-icons md-36">menu_book</span>BookLibary</h1></div>
+        <div class="add-book">
+            <button class="add"><span class="material-icons md-36">add</span></button>
+        </div>
+    </div>
+
+    <div class="book-container">
+        <div class="no-books">
+            <button class="add"><span class="material-icons md-36">add</span></button>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal">
+    <div class="modal-header">
+        <div class="title">Add new book</div>
+        <button class="close">&times;</button>
+    </div>
+
+    <form> 
+        <label for="title">*Title:</label>
+        <input type="text" id="title" required>
+        <label for="author">*Author:</label>
+        <input type="text" id="author" required>
+        <label for="pages">*Number of pages:</label>
+        <input type="number" id="pages" required>
+        <label for="isbn">*<a href="https://isbnsearch.org/" target="_blank">ISBN</a>:</label>
+        <input type="number" id="isbn" name="isbn" pattern="^(?:ISBN(?:-13)?:?\ )?(?=[0-9]{13}$|(?=(?:[0-9]+[-\ ]){4})[-\ 0-9]{17}$)97[89][-\ ]?[0-9]{1,5}[-\ ]?[0-9]+[-\ ]?[0-9]+[-\ ]?[0-9]$" required>
+        <div class="read">
+            <label for="read">Check if you already read it.</label>
+            <input type="checkbox" id="read" name="read">
+        </div>
+        <p>*required</p>
+        <button type="submit" class="submit">Add new book</button>
+    </form>
+</div>
+<div id="overlay"></div>    
+<script src="./assets/script.js"></script>
+</body>
+</html>
